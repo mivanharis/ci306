@@ -6,7 +6,7 @@
 		public function paginate($page = null, $perPage = null)
 		{
 			if ($page == null) $page = 0;
-			if ($perPage == null) $page = 10;
+			if ($perPage == null) $perPage = 10;
 			$offset = $this->calculateOffset($page,$perPage);
 			return $this->db->limit($perPage,$offset)
 							->get($this->table)
